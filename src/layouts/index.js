@@ -41,7 +41,7 @@ const Customer = (props) => {
         routes={routes}
         logo={{
           innerLink: "/ss/serviceprovider-index",
-          imgSrc: require("../assets/img/logo/logo.png").default,
+          imgSrc: require("../assets/img/logo/logo.jpeg").default,
           imgAlt: "...",
         }}
       />

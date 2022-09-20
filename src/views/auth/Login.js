@@ -4,7 +4,6 @@ import * as Yup from "yup";
 // reactstrap components
 import { useHistory } from "react-router";
 import { Button, Card, CardHeader, CardBody, FormGroup, Form, Input, InputGroupAddon, InputGroupText, InputGroup, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   const initialValues = {

@@ -98,7 +98,7 @@ const Sidebar = (props) => {
 					style={{
 						backgroundImage:
 							"url(" +
-							require("../../assets/img/logo/logo.png").default +
+							require("../../assets/img/logo/logo.jpeg").default +
 							")",
 						backgroundSize: "150px",
 						backgroundPosition: "center top",

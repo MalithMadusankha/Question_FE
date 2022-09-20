@@ -39,30 +39,28 @@ export default function Index() {
           </Box>
           <Box className="pt-3">
             <Box>
-              <Label className="font-weight-bold">Grade :</Label>
-              <Label className="ps-2"> Health</Label>
-            </Box>
-            <Box>
               <Label className="font-weight-bold">Fruit :</Label>
-              <Label className="ps-2">Papaya </Label>
+              <Label className="ps-2"> Papaya</Label>
             </Box>
             <Box>
-              <Label className="font-weight-bold">Condition :</Label>
-              <Label className="ps-2"> Edible</Label>
+              <Label className="font-weight-bold">Fruit Status:</Label>
+              <Label className="ps-2">Fresh </Label>
             </Box>
             <Box>
-              <Label className="font-weight-bold">Method of Rippend :</Label>
-              <Label className="ps-2">Natural</Label>
+              <Label className="font-weight-bold">Fruit Condition :</Label>
+              <Label className="ps-2"> Mature</Label>
             </Box>
             <Box>
-              <Label className="font-weight-bold">Diseases :</Label>
-              <Label className="ps-2"> Detected</Label>
+              <Label className="font-weight-bold">AVG Temp :</Label>
+              <Label className="ps-2">30</Label>
             </Box>
             <Box>
-              <ul>
-                <li><Label>Scab</Label></li>
-                <li><Label>Sooty bloch</Label></li>
-              </ul>
+              <Label className="font-weight-bold">AVG Humidty :</Label>
+              <Label className="ps-2"> 91</Label>
+            </Box>
+            <Box>
+              <Label className="font-weight-bold">Grade :</Label>
+              <Label className="ps-2"> A</Label>
             </Box>
           </Box>
         </Card>

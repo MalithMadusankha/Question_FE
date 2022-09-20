@@ -8,18 +8,11 @@ import {
 	DropdownItem,
 	UncontrolledDropdown,
 	DropdownToggle,
-	Form,
-	FormGroup,
-	InputGroupAddon,
-	InputGroupText,
-	Input,
-	InputGroup,
 	Navbar,
 	Nav,
 	Container,
 	Media,
 } from "reactstrap";
-import API from "variables/tokenURL";
 import DefaultProfile from '../../assets/img/default-profile.jpg'
 
 const NavBar = (props) => {
@@ -27,7 +20,6 @@ const NavBar = (props) => {
 	const [customer, setCustomer] = useState("");
 
 	const history = useHistory();
-	const location = useLocation();
 
 	const logout = () => {
 		history.push("/auth");
