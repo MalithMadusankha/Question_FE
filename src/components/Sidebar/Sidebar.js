@@ -6,30 +6,20 @@ import { PropTypes } from "prop-types";
 
 // reactstrap components
 import {
-	Button,
-	Card,
-	CardHeader,
-	CardBody,
-	CardTitle,
 	Collapse,
 	DropdownMenu,
 	DropdownItem,
 	UncontrolledDropdown,
 	DropdownToggle,
-	FormGroup,
 	Form,
 	Input,
 	InputGroupAddon,
 	InputGroupText,
 	InputGroup,
-	Media,
-	NavbarBrand,
 	Navbar,
 	NavItem,
 	NavLink,
 	Nav,
-	Progress,
-	Table,
 	Container,
 	Row,
 	Col,
@@ -100,9 +90,10 @@ const Sidebar = (props) => {
 							"url(" +
 							require("../../assets/img/logo/logo.jpeg").default +
 							")",
-						backgroundSize: "150px",
+						backgroundSize: "100px",
 						backgroundPosition: "center top",
-						backgroundRepeat: 'no-repeat'
+						backgroundRepeat: 'no-repeat',
+						height: "100px"
 					}}
 				/>
 				<br />

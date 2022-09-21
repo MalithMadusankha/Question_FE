@@ -20,7 +20,7 @@ import {
   PaginationLink,
 } from "reactstrap";
 
-export default function Index() {
+export default function SoftSkillQuiz() {
   const [technologyOpen, setTechnologyOpen] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [softSkillOpen, setSoftSkillOpen] = useState(false);
