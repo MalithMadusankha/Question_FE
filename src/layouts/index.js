@@ -3,7 +3,7 @@ import { useLocation, Route, Switch, Redirect } from "react-router-dom";
 // reactstrap components
 import { Container } from "reactstrap";
 // core components
-import NavBar from "components/Navbars";
+import NavBar from "components/Navbars/AdminNavbar";
 import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";

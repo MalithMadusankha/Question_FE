@@ -11079,6 +11079,11 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-audio-waveform@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/react-audio-waveform/-/react-audio-waveform-0.0.5.tgz#32376a27ca2271e7e9f4ecb62c3319bd8a5b1e8a"
+  integrity sha512-4dJwhl+LQRuywzmmjuhWT5GueT3Ai2ZhB+loVxg0sRdhplyDp96xAu10/V/+J25Cl7YqNtl2DWSxvSoI/i6l6w==
+
 react-bootstrap@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.4.0.tgz#99bf9656e2e7a23ae1ae135d18fd5ad7c344b416"
@@ -11442,6 +11447,13 @@ react-transition-group@^4.4.5:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-wavify@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/react-wavify/-/react-wavify-1.6.2.tgz#36168d7c1bef86018b2e812fdb956aa9dd595652"
+  integrity sha512-EXOKJrwtx3/dtYz9NOgskijiAdUGyRMPH7Q8XfUAtNd6yzwAx8om08y8iq+sdAI3qFTD8k841skt/VPhwit1jQ==
+  dependencies:
+    prop-types "^15.8.1"
 
 react@17.0.2:
   version "17.0.2"
