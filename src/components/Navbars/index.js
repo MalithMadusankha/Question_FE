@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 // import decode from "jwt-decode"
 
 // reactstrap components

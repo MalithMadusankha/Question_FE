@@ -1,12 +1,8 @@
-import AddCategoryForm from "components/Forms/AddCategoryForm";
-import AddJobForm from "components/Forms/AddJobForm";
 import Header from "components/Headers/Header";
 import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Form } from "react-bootstrap";
 import {
   Card,
-  Button,
   Col,
   Row,
   CardFooter,
@@ -15,63 +11,50 @@ import {
   Pagination,
   PaginationItem,
   PaginationLink,
-  Modal, ModalHeader, ModalBody, ModalFooter, Container
+  Label,
+  Container,
 } from "reactstrap";
 
-export default function Index() {
-  const [jobModal, setJobModal] = useState(false);
-  const [categoryModal, setCategoryModal] = useState(false);
-
-  const toggleJob = () => setJobModal(!jobModal);
-  const toggleCategory = () => setCategoryModal(!categoryModal);
+export default function CandidteJobs() {
   return (
     <>
     <Header/>
       <Container className="mt--7" fluid>
-
+        <h2>Jobs</h2>
+        <Card className="mt-3 shadow">
+          <CardHeader className="border-0">
+            <h3 className="mb-0 text-primary">Job Details</h3>
+          </CardHeader>
+          <Form className="px-3 pb-5">
+            <Row className="px-3 ">
+              <Col className="col">
+                <Label> Job Title:</Label>{" "}
+                <Label className="h4"> Software Developer</Label>
+              </Col>
+              <Col className="col">
+                <Label> Job Category: </Label>{" "}
+                <Label className="h4"> Fullstack </Label>
+              </Col>
+            </Row>
+          </Form>
+        </Card>
         <Card className="mt-4 shadow">
           <CardHeader className="border-0">
-          <Row>
-          <Col>
-          <h3 className="mb-0 text-primary">Available Questions</h3>
-          </Col>
-          <Col>
-            <div className="d-flex flex-row-reverse">
-              <div className="px-1">
-                <Button color="primary" size="sm"  onClick={toggleCategory}>
-                  <i class="bx bx-plus"></i> Add Category
-                </Button>
-              </div>
-              <div className="px-1">
-                <Button color="primary" size="sm"  onClick={toggleJob}>
-                  <i class="bx bx-plus"></i> Add Job
-                </Button>
-              </div>
-            </div>
-          </Col>
-        </Row>
-        
+            <h3 className="mb-0 text-primary">Requirements</h3>
           </CardHeader>
           <Table className="align-items-center table-flush" responsive>
             <thead className="thead-light">
               <tr>
-                <th scope="col">Job Title</th>
+                <th scope="col">Technology</th>
+                <th scope="col">Level</th>
                 <th scope="col">Category</th>
-                <th scope="col">Date</th>
-                <th scope="col"></th>
-                <th scope="col" />
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Software Developer</td>
-                <td>Online</td>
-                <td>12/05/2022</td>
-                <td className="text-right">
-                  <Link>
-                    <i class="bx bx-info-circle bx-burst fs-5"></i>
-                  </Link>
-                </td>
+                <td>Java Script</td>
+                <td>Beginner</td>
+                <td>Programing language</td>
               </tr>
             </tbody>
           </Table>
@@ -129,20 +112,6 @@ export default function Index() {
           </CardFooter>
         </Card>
       </Container>
-      <Modal isOpen={jobModal} toggle={toggleJob}>
-        <ModalHeader toggle={toggleJob}><h3 className="text-primary">Add Job</h3> </ModalHeader>
-        <ModalBody>
-          <AddJobForm/>
-        </ModalBody>
-      </Modal>
-      <Modal isOpen={categoryModal} toggle={toggleCategory}>
-        <ModalHeader toggle={toggleCategory}><h3 className="text-primary">Add Category</h3> </ModalHeader>
-        <ModalBody>
-          <AddCategoryForm/>
-        </ModalBody>
-        <ModalFooter>
-        </ModalFooter>
-      </Modal>
     </>
   );
 }

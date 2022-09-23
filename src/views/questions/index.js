@@ -1,4 +1,3 @@
-import { Box } from "@material-ui/core";
 import React from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
@@ -18,23 +17,30 @@ import {
   Pagination,
   PaginationItem,
   PaginationLink,
+  Container,
 } from "reactstrap";
+
+import Header from '../../components/Headers/Header'
 
 export default function Index() {
   const [technologyOpen, setTechnologyOpen] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
+  const [softSkillOpen, setSoftSkillOpen] = useState(false);
 
   const toggleTechnology = () => setTechnologyOpen((prevState) => !prevState);
   const toggleCategory = () => setCategoryOpen((prevState) => !prevState);
+  const toggleSoftSkill = () => setSoftSkillOpen((prevState) => !prevState);
   return (
     <>
-      <Box className="p-5">
-        <h2>Question Setting</h2>
+    <Header/>
+      <Container className="mt--7" fluid>
+        
         <Card className="mt-3 shadow">
           <CardHeader className="border-0">
-            <h3 className="mb-0 text-primary">Upload Question</h3>
+          <h2>Question Setting</h2>
+            <h3 className="mb-0 text-primary">Add Technical Question</h3>
           </CardHeader>
-          <Form className="px-3 pb-5">
+          <Form className="px-3 pb-3">
             <Row>
               <Col className="col-sm-3">
                 <div class="custom-file">
@@ -82,6 +88,45 @@ export default function Index() {
                       <DropdownItem>Foo Action</DropdownItem>
                       <DropdownItem>Bar Action</DropdownItem>
                       <DropdownItem>Quo Action</DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
+                </div>
+              </Col>
+              <Col>
+                <Button color="primary" type="submite">
+                  Upload Question
+                </Button>
+              </Col>
+            </Row>
+          </Form>
+          <CardHeader className="border-0">
+            <h3 className="mb-0 text-primary">Add Soft Skill Question</h3>
+          </CardHeader>
+          <Form className="px-3 pb-5">
+            <Row>
+              <Col className="col-sm-6">
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    id="validatedCustomFile"
+                    required
+                  />
+                  <label class="custom-file-label" for="validatedCustomFile">
+                    Choose file...
+                  </label>
+                  <div class="invalid-feedback">
+                    Example invalid custom file feedback
+                  </div>
+                </div>
+              </Col>
+              <Col className="col-sm-3">
+                <div className="d-flex">
+                  <Dropdown isOpen={softSkillOpen} toggle={toggleSoftSkill}>
+                    <DropdownToggle caret>Select soft skill</DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem>Leadership</DropdownItem>
+                      <DropdownItem>Team Work</DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
                 </div>
@@ -174,7 +219,7 @@ export default function Index() {
             </nav>
           </CardFooter>
         </Card>
-      </Box>
+      </Container>
     </>
   );
 }
