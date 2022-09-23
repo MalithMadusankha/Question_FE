@@ -1,4 +1,5 @@
 import { Box } from "@material-ui/core";
+import Header from "components/Headers/Header";
 import React from "react";
 import { useState } from "react";
 import Wave from "react-wavify";
@@ -7,6 +8,7 @@ import {
   Button,
   Row,
   Label,
+  Container,
 } from "reactstrap";
 
 export default function TechnicalSkillQuiz() {
@@ -17,10 +19,9 @@ export default function TechnicalSkillQuiz() {
   // const toggleCategory = () => setCategoryOpen((prevState) => !prevState);
   return (
     <>
-      <Box className="p-5">
-        <center>
-          <h2>Technical Skill - Quiz</h2>
-        </center>
+    <Header/>
+      <Container className="mt--7" fluid>
+    
         <div class="d-flex justify-content-between">
           <Card className={`mt-3 px-3 py-1 shadow ${questionOn} `}>1/10</Card>
           <Card className={`mt-3 px-3 py-1 shadow ${questionOn} `}>
@@ -102,7 +103,7 @@ export default function TechnicalSkillQuiz() {
             </center>
           </Row>
         </Card>
-      </Box>
+      </Container>
     </>
   );
 }

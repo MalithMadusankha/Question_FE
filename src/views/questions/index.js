@@ -1,4 +1,3 @@
-import { Box } from "@material-ui/core";
 import React from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
@@ -18,7 +17,10 @@ import {
   Pagination,
   PaginationItem,
   PaginationLink,
+  Container,
 } from "reactstrap";
+
+import Header from '../../components/Headers/Header'
 
 export default function Index() {
   const [technologyOpen, setTechnologyOpen] = useState(false);
@@ -30,10 +32,12 @@ export default function Index() {
   const toggleSoftSkill = () => setSoftSkillOpen((prevState) => !prevState);
   return (
     <>
-      <Box className="p-5">
-        <h2>Question Setting</h2>
+    <Header/>
+      <Container className="mt--7" fluid>
+        
         <Card className="mt-3 shadow">
           <CardHeader className="border-0">
+          <h2>Question Setting</h2>
             <h3 className="mb-0 text-primary">Add Technical Question</h3>
           </CardHeader>
           <Form className="px-3 pb-3">
@@ -215,7 +219,7 @@ export default function Index() {
             </nav>
           </CardFooter>
         </Card>
-      </Box>
+      </Container>
     </>
   );
 }

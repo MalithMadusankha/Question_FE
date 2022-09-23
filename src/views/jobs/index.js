@@ -1,9 +1,8 @@
-import { Box } from "@material-ui/core";
 import AddCategoryForm from "components/Forms/AddCategoryForm";
 import AddJobForm from "components/Forms/AddJobForm";
+import Header from "components/Headers/Header";
 import React from "react";
 import { useState } from "react";
-import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
   Card,
@@ -16,7 +15,7 @@ import {
   Pagination,
   PaginationItem,
   PaginationLink,
-  Modal, ModalHeader, ModalBody, ModalFooter
+  Modal, ModalHeader, ModalBody, ModalFooter, Container
 } from "reactstrap";
 
 export default function Index() {
@@ -27,10 +26,14 @@ export default function Index() {
   const toggleCategory = () => setCategoryModal(!categoryModal);
   return (
     <>
-      <Box className="p-5">
-        <Row>
+    <Header/>
+      <Container className="mt--7" fluid>
+
+        <Card className="mt-4 shadow">
+          <CardHeader className="border-0">
+          <Row>
           <Col>
-            <h2>Job Setting</h2>
+          <h3 className="mb-0 text-primary">Available Questions</h3>
           </Col>
           <Col>
             <div className="d-flex flex-row-reverse">
@@ -47,9 +50,7 @@ export default function Index() {
             </div>
           </Col>
         </Row>
-        <Card className="mt-4 shadow">
-          <CardHeader className="border-0">
-            <h3 className="mb-0 text-primary">Available Questions</h3>
+        
           </CardHeader>
           <Table className="align-items-center table-flush" responsive>
             <thead className="thead-light">
@@ -127,7 +128,7 @@ export default function Index() {
             </nav>
           </CardFooter>
         </Card>
-      </Box>
+      </Container>
       <Modal isOpen={jobModal} toggle={toggleJob}>
         <ModalHeader toggle={toggleJob}><h3 className="text-primary">Add Job</h3> </ModalHeader>
         <ModalBody>

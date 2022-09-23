@@ -1,17 +1,10 @@
-import { Box } from "@material-ui/core";
+import Header from "components/Headers/Header";
 import React from "react";
-import { useState } from "react";
 import { Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import {
   Card,
-  Button,
   Col,
   Row,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   CardFooter,
   CardHeader,
   Table,
@@ -19,12 +12,14 @@ import {
   PaginationItem,
   PaginationLink,
   Label,
+  Container,
 } from "reactstrap";
 
 export default function CandidteJobs() {
   return (
     <>
-      <Box className="p-5">
+    <Header/>
+      <Container className="mt--7" fluid>
         <h2>Jobs</h2>
         <Card className="mt-3 shadow">
           <CardHeader className="border-0">
@@ -116,7 +111,7 @@ export default function CandidteJobs() {
             </nav>
           </CardFooter>
         </Card>
-      </Box>
+      </Container>
     </>
   );
 }

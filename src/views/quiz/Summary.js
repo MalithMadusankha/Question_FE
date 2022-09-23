@@ -1,26 +1,22 @@
-import { Box } from "@material-ui/core";
+import Header from "components/Headers/Header";
 import React from "react";
 import {
   Card,
-  Col,
-  Row,
   CardFooter,
   CardHeader,
   Table,
   Pagination,
   PaginationItem,
   PaginationLink,
+  Container,
 } from "reactstrap";
 
 export default function Summary() {
   return (
     <>
-      <Box className="p-5">
-        <Row>
-          <Col>
-            <h2>Summary</h2>
-          </Col>
-        </Row>
+    <Header/>
+      <Container className="mt--7" fluid>
+ 
         <Card className="mt-4 shadow">
           <CardHeader className="border-0">
             <h3 className="mb-0 text-primary">Questions Summary</h3>
@@ -183,7 +179,7 @@ export default function Summary() {
             </nav>
           </CardFooter>
         </Card>
-      </Box>
+      </Container>
     </>
   );
 }

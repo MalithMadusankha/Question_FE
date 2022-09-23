@@ -9,7 +9,7 @@ const Footer = () => {
 					<div className="copyright text-center text-xl-left text-muted">
 						© {new Date().getFullYear()}{" "}
 						<a className="font-weight-bold ml-1" target="_blank">
-							THE BLISS
+							PRE INTERVIEW REVIEWER
 						</a>
 					</div>
 				</Col>
@@ -17,7 +17,7 @@ const Footer = () => {
 				<Col xl="6">
 					<Nav className="nav-footer justify-content-center justify-content-xl-end">
 						<NavItem>
-							<NavLink target="_blank">THE BLISS</NavLink>
+							<NavLink target="_blank">PRE INTERVIEW REVIEWER</NavLink>
 						</NavItem>
 
 						<NavItem>

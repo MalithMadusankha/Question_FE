@@ -1,4 +1,5 @@
 import { Box } from "@material-ui/core";
+import Header from "components/Headers/Header";
 import React from "react";
 import { useState } from "react";
 import {
@@ -6,6 +7,7 @@ import {
   Button,
   Row,
   Label,
+  Container,
 } from "reactstrap";
 
 export default function SoftSkillQuiz() {
@@ -14,10 +16,9 @@ export default function SoftSkillQuiz() {
 
   return (
     <>
-      <Box className="p-5">
-        <center>
-          <h2>Soft Skill - Quiz</h2>
-        </center>
+    <Header/>
+      <Container className="mt--7" fluid>
+      
         <div class="d-flex justify-content-between">
           <Card className={`mt-3 px-3 py-1 shadow ${questionOn} `}>1/10</Card>
           <Card className={`mt-3 px-3 py-1 shadow ${questionOn} `}>
@@ -86,7 +87,7 @@ export default function SoftSkillQuiz() {
             </center>
           </Row>
         </Card>
-      </Box>
+      </Container>
     </>
   );
 }
