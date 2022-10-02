@@ -14,33 +14,23 @@ import {
 } from "reactstrap";
 
 export default function AddCategoryForm() {
-
   return (
     <>
       <Form>
         <Row>
-             <Col>
+          <Col>
           <FormGroup>
-            <Label>Select Category File</Label>
-            <div class="custom-file">
-                  <input
-                    type="file"
-                    class="custom-file-input"
-                    id="validatedCustomFile"
-                    required
-                  />
-                  <label class="custom-file-label" for="validatedCustomFile">
-                    Choose file...
-                  </label>
-                  <div class="invalid-feedback">
-                    Example invalid custom file feedback
-                  </div>
-                </div>
-          </FormGroup>
-        </Col>
+              <Label for="exampleEmail">Category</Label>
+              <Input />
+            </FormGroup>
+          </Col>
         </Row>
-        <div class="d-flex flex-row-reverse"><Button type="submite" color="primary"> Upload Category</Button></div>
-       
+        <div class="d-flex flex-row-reverse">
+          <Button type="submite" color="primary">
+            {" "}
+            Upload Category
+          </Button>
+        </div>
       </Form>
     </>
   );
